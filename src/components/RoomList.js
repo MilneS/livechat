@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import {
-  Jumbotron,
-  Spinner,
-  ListGroup,
-  ListGroupItem,
-  Button,
-} from "reactstrap";
+import { Spinner, ListGroup, ListGroupItem, Button } from "reactstrap";
 import Moment from "moment";
 import firebase from "../Firebase";
 
@@ -92,7 +86,7 @@ function RoomList() {
   return (
     <div>
       {showLoading && <Spinner color="primary" />}
-      <Jumbotron>
+      <div class="rounded px-3 px-sm-4 py-3 py-sm-5">
         <h3>
           {nickname}{" "}
           <Button
@@ -120,7 +114,7 @@ function RoomList() {
             </ListGroupItem>
           ))}
         </ListGroup>
-      </Jumbotron>
+      </div>
     </div>
   );
 }
