@@ -91,7 +91,7 @@ function RoomList() {
         <div class="enter">
           Welcome {nickname},{" "}
           <span class="loginLink">
-            <Link to="/addroom">add a room</Link>
+            <Link to="/addroom">Add a room</Link>
           </span>
         </div>
         <div class="enter">
