@@ -1,6 +1,7 @@
 .Container {
   display: flex;
   padding: 10px;
+  width: 100%;
 }
 .mainCont {
   display: flex;
@@ -72,12 +73,6 @@ button {
 button:hover {
   border: 3px solid rgb(2, 175, 175);
 }
-.label {
-  font-size: 25px;
-  padding: 8px 10px;
-  font-weight: bold;
-  color: rgb(58, 58, 58);
-}
 
 input {
   border-radius: 3px;
@@ -91,6 +86,9 @@ input {
 .exit {
   width: 80%;
 }
+.exit{
+  margin:0px;
+}
 .inputBtnCont {
   margin-right: 40px;
   display: flex;
@@ -103,6 +101,9 @@ input:focus {
 .exitCont {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  width:100%;
+  margin:0px;
 }
 
 .UsersCard {

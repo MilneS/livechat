@@ -4,13 +4,8 @@ import {
   Container,
   Row,
   Col,
-  Card,
-  CardBody,
-  CardSubtitle,
-  Button,
   Form,
   InputGroup,
-  Input,
 } from "reactstrap";
 import Moment from "moment";
 import firebase from "../Firebase";
@@ -131,8 +126,6 @@ function ChatRoom() {
   return (
     <div className="Container">
       <Container>
-        <Row>
-          <Col xs="4">
             <div class="exitCont">
             <div class="exit">
             </div>
@@ -143,10 +136,9 @@ function ChatRoom() {
                   exitChat();
                 }}
               >
-                Exit Chat
+                Exit
               </button>
               </div>
-          </Col>
           <Col xs="8">
             <ScrollToBottom className="ChatContent">
               {chats.map((item, idx) => (
@@ -201,7 +193,6 @@ function ChatRoom() {
               </Form>
             </footer>
           </Col>
-        </Row>
       </Container>
     </div>
   );

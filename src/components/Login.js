@@ -42,7 +42,6 @@ function Login() {
         {showLoading && <Spinner color="primary" />}
         <div class="loginFormContainer">
           <form onSubmit={login}>
-            <label class="label">Username</label>
             <input
               type="text"
               name="nickname"

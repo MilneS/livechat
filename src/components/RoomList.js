@@ -1,7 +1,7 @@
 import Moment from "moment";
 import { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { ListGroup, Spinner } from "reactstrap";
+import { Spinner } from "reactstrap";
 import firebase from "../Firebase";
 import "../Styles.css";
 
@@ -96,7 +96,7 @@ function RoomList() {
         </div>
         <div class="enter">
           or enter a chatroom:
-          <ListGroup>
+          <ul>
             {room.map((item, idx) => (
               <li
                 key={idx}
@@ -108,7 +108,7 @@ function RoomList() {
                 {item.roomname}
               </li>
             ))}
-          </ListGroup>
+          </ul>
         </div>
       </div>
       <div class="logout">
