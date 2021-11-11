@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Spinner, Form, Button, FormGroup, Label, Input } from "reactstrap";
+import { Spinner } from "reactstrap";
 import firebase from "../Firebase";
+import "../Styles.css";
 
 function Login() {
   const history = useHistory();
@@ -35,25 +36,25 @@ function Login() {
     setCreds({ ...creds, [e.target.name]: e.target.value });
   };
   return (
-    <div>
-      {showLoading && <Spinner color="primary" />}
-      <div class="rounded px-3 px-sm-4 py-3 py-sm-5">
-        <Form onSubmit={login}>
-          <FormGroup>
-            <Label>Nickname</Label>
-            <Input
+    <div class='mainCont'>
+      <h1>Login to start chatting.</h1>
+      <div class="loginContainer">
+        {showLoading && <Spinner color="primary" />}
+        <div class="loginFormContainer">
+          <form onSubmit={login}>
+            <label class="label">Username</label>
+            <input
               type="text"
               name="nickname"
               id="nickname"
-              placeholder="Enter Your Nickname"
+              placeholder="Enter Your Username"
               value={creds.nickname}
               onChange={onChange}
+              class="loginInput"
             />
-          </FormGroup>
-          <Button variant="primary" type="submit">
-            Login
-          </Button>
-        </Form>
+            <button class="button">Login</button>
+          </form>
+        </div>
       </div>
     </div>
   );
