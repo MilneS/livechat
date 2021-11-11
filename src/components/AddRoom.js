@@ -3,11 +3,6 @@ import { useHistory } from "react-router-dom";
 import {
   Alert,
   Spinner,
-  Form,
-  Button,
-  FormGroup,
-  Label,
-  Input,
 } from "reactstrap";
 import firebase from "../Firebase";
 
@@ -45,21 +40,18 @@ const onChange = (e) => {
 }
 
 return (
-        <div>
+        <div class='mainCont'>
             {showLoading &&
                 <Spinner color="primary" />
             }
             <div class="rounded px-3 px-sm-4 py-3 py-sm-5">
                 <h2>Please enter new Room</h2>
-                <Form onSubmit={save}>
-                    <FormGroup>
-                        <Label>Room Name</Label>
-                        <Input type="text" name="roomname" id="roomname" placeholder="Enter Room Name" value={room.roomname} onChange={onChange} />
-                    </FormGroup>
-                    <Button variant="primary" type="submit">
+                <form onSubmit={save}>
+                        <input type="text" name="roomname" id="roomname" placeholder="Enter Room Name" value={room.roomname} onChange={onChange} />
+                    <button variant="primary" type="submit">
                         Add
-                    </Button>
-                </Form>
+                    </button>
+                </form>
         </div>
         </div>
     );
