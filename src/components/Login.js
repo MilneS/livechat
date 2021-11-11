@@ -52,7 +52,7 @@ function Login() {
               onChange={onChange}
               class="loginInput"
             />
-            <button class="button">Login</button>
+            <button>Login</button>
           </form>
         </div>
       </div>

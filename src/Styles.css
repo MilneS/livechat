@@ -8,28 +8,68 @@
   align-items: center;
   margin: 150px auto;
   color: rgb(58, 58, 58);
+  width:fit-content;
+  padding: 50px 50px;
+  background-color: rgb(241, 252, 252);
+}
+.logout{
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top:50px
 }
 h1 {
   font-size: 50px;
+}
+a{
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+  width:fit-content;
+  font-size: 30px;
+  font-weight: 600;
+}
+.enter{
+  margin-top: 50px;
+  font-size: 30px;
+}
+ul{
+  margin-top: 30px;
+  list-style-type: none;
+  font-size: 30px;
+  color: rgb(58, 58, 58);
+}
+ul>*{
+  margin-top:20px;
+  font-weight: 600;
+width:fit-content
+}
+ul>*:hover, a:hover{
+  color: rgb(2, 161, 161);
+
+  cursor: pointer;
 }
 .loginContainer {
   width: fit-content;
   display: flex;
   margin-top: 40px;
 }
+
 .loginFormContainer {
   display: flex;
   flex-direction: column;
 }
-.button {
+button {
   background-color: white;
   font-size: 20px;
   margin: 10px;
   padding: 8px 10px;
   border-radius: 3px;
-  border: 3px solid rgb(2, 175, 175);
+  border: 3px solid rgba(2, 175, 175, 0.397);
   color: rgb(58, 58, 58);
   font-weight: bold;
+}
+button:hover{
+  border: 3px solid rgb(2, 175, 175);
 }
 .label {
   font-size: 25px;
@@ -43,7 +83,11 @@ h1 {
   padding: 8px 10px;
   font-size: 20px;
   margin: 10px 0px;
-  border: 3px solid rgb(2, 175, 175);
+  border: 3px solid rgba(2, 175, 175, 0.397);
+}
+input:focus{
+  outline: none;
+  background-color: white;
 }
 .UsersCard {
   margin: 5px 20px;

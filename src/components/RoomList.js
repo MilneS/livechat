@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { Spinner, ListGroup, ListGroupItem, Button } from "reactstrap";
 import Moment from "moment";
+import { useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { ListGroup, Spinner } from "reactstrap";
 import firebase from "../Firebase";
+import "../Styles.css";
 
 function RoomList() {
   const [room, setRoom] = useState([]);
@@ -84,36 +85,40 @@ function RoomList() {
   };
 
   return (
-    <div>
+    <div class="mainCont">
       {showLoading && <Spinner color="primary" />}
-      <div class="rounded px-3 px-sm-4 py-3 py-sm-5">
-        <h3>
-          {nickname}{" "}
-          <Button
-            onClick={() => {
-              logout();
-            }}
-          >
-            Logout
-          </Button>
-        </h3>
-        <h2>Room List</h2>
-        <div>
-          <Link to="/addroom">Add Room</Link>
+      <div class="secondCont">
+        <div class="enter">
+          Welcome {nickname},{" "}
+          <span class="loginLink">
+            <Link to="/addroom">add a room</Link>
+          </span>
         </div>
-        <ListGroup>
-          {room.map((item, idx) => (
-            <ListGroupItem
-              key={idx}
-              action
-              onClick={() => {
-                enterChatRoom(item.roomname);
-              }}
-            >
-              {item.roomname}
-            </ListGroupItem>
-          ))}
-        </ListGroup>
+        <div class="enter">
+          or enter a chatroom:
+          <ListGroup>
+            {room.map((item, idx) => (
+              <li
+                key={idx}
+                action
+                onClick={() => {
+                  enterChatRoom(item.roomname);
+                }}
+              >
+                {item.roomname}
+              </li>
+            ))}
+          </ListGroup>
+        </div>
+      </div>
+      <div class="logout">
+        <button
+          onClick={() => {
+            logout();
+          }}
+        >
+          Logout
+        </button>
       </div>
     </div>
   );
